@@ -1,0 +1,47 @@
+extends ../../layout
+
+block content
+  div(id="adminBg")
+    br
+    include ../nav.jade
+    br
+    div(class="row")
+      div(class="col-sm-12")
+        div(class="container")
+          h1 Create New Video
+          br
+          form(method="post" action="/admin/createvideo")
+            div(class="row")
+              div(class="col-sm-6")
+                label(for="title") Title:
+                input(type="text" class="form-control" name="title")
+              div(class="col-sm-6")
+                label(for="category") Category
+                select(for="category" name="category" class="form-control")
+                  option(value="Interview") Interview
+                  option(value="Podcast") Podcast
+                  option(value="HipHop") Hip Hop
+                  option(value="RB") R &copy; B
+                  option(value="POP") POP
+                  option(value="Documentary") Documentary
+                  option(value="News") News
+                  option(value="Trailers") Movie / TV Trailers
+                  option(value="Movie") Movie
+                  option(value="Show") Show
+                  option(value="Commercial") Commercial
+                  option(value="Announcements") Announcements
+            div(class="row")
+              div(class="col-sm-6")
+                label(for="mainImage") Main Image:
+                input(type="text" class="form-control" name="mainImage")
+              div(class="col-sm-6")
+                label(for="link") Video Link
+                input(type="text" class="form-control" name="link")
+            div(class="row")
+              div(class="col-sm-6")
+                label(for="description") Description:
+                textarea(type="text" class="form-control" name="description")
+            div(class="row")
+              div(class="col-sm-6")
+                input(type="submit", value="Submit" class="btn btn-primary")
+  div(id="marg")

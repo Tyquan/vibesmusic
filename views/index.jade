@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div(id="main-body")
+    if videos < 1
+      h1(class="text-center") No Videos Added Yet
+    else
+      div(class="row")
+        div(class="col-sm-12")
+          div(id="latestVideoContainer")
+            center
+              div(id="latest")
+      hr
+      div(id="latest_two")
+      hr
+      h1(class="text-center") New Videos
+      div(class="row")
+        each vid in videos
+          div(id="col-sm-6")
+            img(id="videoImages" src=vid.mainImage)
+            h1(id="videoImageTitles")
+              a(href="/showvideo/"+vid._id)= vid.title
+  script(src="/javascripts/videos/latest.js")
+  script(src="/javascripts/videos/latest_two.js")
+  script(src="/javascripts/videos/all.js")
