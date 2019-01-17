@@ -1,5 +1,11 @@
 $.get('/api/v1/videos', function(data){
-	var result = `<div class="row"><div class="col-md-6"><iframe id="latestTwoVideos" src=${data[1].link} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="col-md-6"><iframe id="latestTwoVideos" src=${data[2].link} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>`;
-	
-	//$('#latest_two').append(result);
+
+	var div = $(`<div>`);
+	div.addClass("row");
+	data.forEach(function (d) {
+		div.append(`<div id="col-sm-6"><img id="videoImages" src=${d.mainImage} /><h1 id="videoImageTitles"><a href="/showvideo/${d._id}">${d.title}</a</h1></div>`);
+	});
+
+	$("#allVideos").append(div);
+
 });

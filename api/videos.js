@@ -50,7 +50,7 @@ router.get('/showvideo/:id', (req, res, next) => {
             throw err;
         } else {
         	showDate = moment(data.date_created).format('MMMM Do YYYY, h:mm a');
-        	//console.log(showDate);
+        	console.log(data);
         	res.status(200).json(data);
         }
     });

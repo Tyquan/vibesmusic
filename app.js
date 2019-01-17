@@ -17,6 +17,8 @@ const admin = require('./routes/admin');
 const messages = require('./routes/messages');
 
 const videos = require('./api/videos');
+const comments = require('./api/comments');
+const views = require('./api/views');
 
 // mlab connection 
 const mongoUri = 'mongodb://Tyquan:Jamela17!@ds135926.mlab.com:35926/mocky';
@@ -62,6 +64,8 @@ app.use('/messages', messages);
 
 // API
 app.use('/api/v1/videos', videos);
+app.use('/api/v1/comments', comments);
+app.use('/api/v1/views', views);
 
 
 
