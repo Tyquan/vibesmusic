@@ -19,4 +19,14 @@ router.get('/showvideo/:id', (req, res, next) => {
     });
 });
 
+router.get('/', (req, res, next) => {
+    Video.find({}).sort({date_created: -1}).exec((err, data) => {
+        if (err) {
+            next(err);
+        } else {
+            res.status(200).json(data);
+        }
+    });
+});
+
 module.exports = router;

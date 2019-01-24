@@ -27,6 +27,16 @@ router.get('/latest', function(req, res, next) {
 	});
 });
 
+router.get("/topfive", (req, res, next) => {
+	Video.find({}).sort({views: -1}).limit(5).exec((err, data) => {
+		if (err) {
+			next(err);
+		} else {
+			res.status(200).json(data);
+		}
+	});
+});
+
 /* GET home page. */
 router.get('/latest_two', function(req, res, next) {
 	Video.find({}).sort({date_created: -1}).exec((err, doc) => {
@@ -57,19 +67,19 @@ router.get('/showvideo/:id', (req, res, next) => {
 });
 
 router.get('/recommendations/showvideo/:id', (req, res, next) => {
-    Video.findById(req.params.id, (err, data) => {
-        if (err) {
-            throw err;
-        } else {
-        	Video.find({category: data.category}).sort({date_created: -1}).exec((err, result) => {
-        		if (err) {
-        			throw err;
-        		} else {
-        			res.status(200).json(result);
-        		}
-        	});
-        }
-    });
+  Video.findById(req.params.id, (err, data) => {
+      if (err) {
+          throw err;
+      } else {
+      	Video.find({category: data.category}).sort({date_created: -1}).exec((err, result) => {
+      		if (err) {
+      			throw err;
+      		} else {
+      			res.status(200).json(result);
+      		}
+      	});
+      }
+  });
 });
 
 module.exports = router;

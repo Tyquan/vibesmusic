@@ -5,7 +5,7 @@ $.get(`/api/v1/videos/recommendations${window.location.pathname}`, function(data
 	ul.addClass("list-group")
 	data.forEach(function(d) {
 		if (window.location.pathname != `/showvideo/${d._id}`) {
-			ul.append(`<li class="list-group-item"><img src=${d.mainImage} id="recommendedVideos" /><a href="/showvideo/${d._id}"><h5>${d.title}</h5></a></li>`);
+			ul.append(`<li class="list-group-item" id="recommendationItem"><a href="/showvideo/${d._id}"><img src=${d.mainImage} id="recommendedVideos" /><h5 id="recommendationTitle">${d.title}</h5></a></li>`);
 		}
 	});
 	

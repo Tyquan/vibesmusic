@@ -18,7 +18,7 @@ router.get('/allvideos', (req, res, next) => {
     if (!req.session.user) {
         return res.status(400).send("You have to be logged in to view this section");
     }
-    Video.find({}, (err, data) => {
+    Video.find({}).sort({date_created: -1}).exec((err, data) => {
         if (err) throw err;
         else {
             res.render('admin/videos/allvideos', { videos: data });

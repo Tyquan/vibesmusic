@@ -3,6 +3,7 @@
   #col-sm-6 {
     width: 50%;
     float: left;
+    background-color: black;
   }
 
   #videoImages {
@@ -13,6 +14,9 @@
   #latestVideo {
     width: 100%;
     height: 250px;
+  }
+  #adminImageTitles {
+    color: black;
   }
 
   #latestVideoContainer {
@@ -30,6 +34,7 @@
     margin-bottom: 5%;
     margin-right: 5%;
     margin-left: 2%;
+    color: white;
   }
 
   #employee-link {
@@ -60,5 +65,40 @@
   #mainVideo {
     width: 100%;
     height: 300px;
-}
+  }
+
+  #createBtn {
+    color: white;
+  }
+
+  #recommendationTitle {
+    text-decoration: none;
+  }
+
+  .bg-light {
+    background-color: black !important;
+  }
+
+  .navbar-light .navbar-brand {
+    color: white;
+    font-family: 'Rancho', cursive;
+    font-size: 1.6em;
+    text-decoration: none;
+  }
+
+  #footer {
+    color: white;
+    font-size: 1.6em;
+    font-family: 'Rancho', cursive;
+  }
+
+  #adminContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #ecf0f1;
+  }
+
+  #views-line {
+    width: 100%;
+  }
 }
