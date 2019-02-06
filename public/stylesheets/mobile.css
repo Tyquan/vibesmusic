@@ -6,7 +6,12 @@
   #col-sm-6 {
     width: 50%;
     float: left;
-    background-color: #636e72;
+    background-color: #2d3436;
+  }
+
+  #content {
+    background-color: white;
+    width: 100%;
   }
 
   #videoImages {
@@ -23,17 +28,16 @@
   }
 
   #showVideos {
-    background-color: #34495e;
-    padding: 2%;
+    padding: 1%;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   #showVideo {
-    background-color: #2c3e50;
-    padding: 2%;
+    background-color: #2d3436;
+    padding: 1%;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   #latestVideoContainer {
@@ -118,5 +122,18 @@
 
   #views-line {
     width: 100%;
+  }
+
+  #allVideos {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5%;
+  }
+
+  #commentsContainer {
+    width: 100%;
+    background-color: #2d3436;
+    padding: 1%;
+    border-radius: 5px;
   }
 }

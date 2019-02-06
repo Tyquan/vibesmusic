@@ -6,16 +6,17 @@ block content
       div(class="col-md-8" id="showVideos")
         div(id="showVideo")
         hr
-        h4 Add A Comment:
-        br
-        form(id="target")
-          input(type="text" name="name" class="form-control" placeholder="Display Name" required)
+        div(id="commentsContainer")
+          h4 Add A Comment:
           br
-          textarea(type="text" name="comment" class="form-control" placeholder="Comment" required)
-          br
-          input(type="submit" class="btn btn-primary" value="Submit")
-        hr
-        div(id="comments")
+          form(id="target")
+            input(type="text" name="name" class="form-control" placeholder="Display Name" required)
+            br
+            textarea(type="text" name="comment" class="form-control" placeholder="Comment" required)
+            br
+            input(type="submit" class="btn btn-primary" value="Submit")
+          hr
+          div(id="comments")
       div(class="col-md-4")
         div(class="row")
           div(class="col-sm-12")
