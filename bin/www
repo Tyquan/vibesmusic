@@ -6,7 +6,17 @@
 
 var app = require('../app');
 var debug = require('debug')('vibesmusic:server');
+var fs = require("fs");
 var http = require('http');
+
+// var key = fs.readFileSync('./private.key');
+// var cert = fs.readFileSync( './herrahiphop.csr' );
+// //var ca = fs.readFileSync( 'encryption/intermediate.crt' );
+
+// var options = {
+//   key: key,
+//   cert: cert
+// };
 
 /**
  * Get port from environment and store in Express.
