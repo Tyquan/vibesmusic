@@ -19,7 +19,7 @@ $.get('/api/v1/videos', function(data){
 	var medianHtml = `<h3>Median: ${median(data)}</h3>`;
 	var varianceHtml = `<h3>Variance: ${variance(data).toFixed(2)}</h3>`;
 	var stdHtml = `<h3>Standard Deviation: ${standardDeviation(data).toFixed(2)}</h3>`;
-	var magnitudeHtml = `<h3>Magnitude: ${magnitude(data).toFixed(2)}</h3>`;
+	//var magnitudeHtml = `<h3>Magnitude: ${magnitude(data).toFixed(2)}</h3>`;
 
 	var finalHtml = `<div id="col-sm-12">
 		${countHtml} 
