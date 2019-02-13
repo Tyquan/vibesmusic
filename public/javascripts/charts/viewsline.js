@@ -1,5 +1,4 @@
 $.getJSON("/api/v1/views", (datas) => {
-	console.log(datas);
 	let views = [];
 	let dates = [];
 	let titles = [];

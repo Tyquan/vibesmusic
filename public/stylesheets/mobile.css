@@ -3,6 +3,14 @@
   body {
     font-family: 'Philosopher';
   }
+  .navbar-light .navbar-nav .nav-link {
+    color: white;
+  }
+
+  #foots {
+    color: white;
+  }
+
   #col-sm-6 {
     width: 50%;
     float: left;

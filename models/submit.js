@@ -1,11 +1,19 @@
 var mongoose = require('mongoose');
 
-var messageSchema = mongoose.Schema({
+var submitSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
     },
     email: {
+        type: String,
+        required: true
+    },
+    link: {
+        type: String,
+        required: true
+    },
+    category: {
         type: String,
         required: true
     },
@@ -20,6 +28,6 @@ var messageSchema = mongoose.Schema({
     
 });
 
-var Message = mongoose.model('Message', messageSchema);
+var Submit = mongoose.model('Submit', submitSchema);
 
-module.exports = Message;
+module.exports = Submit;

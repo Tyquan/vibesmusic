@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 const moment = require('moment');
 var Video = require('../models/video');
 var Message = require('../models/message');
+const Submit = require('../models/submit');
 var router = express.Router();
 
 // render Dashboard page
@@ -86,6 +87,22 @@ router.get('/showmessage/:id', (req, res, next) => {
             });
         }
     });
+});
+
+router.get('/submits', (req, res, next) => {
+    if (!req.session.user) {
+        return res.status(400).send("You have to be logged in to view this section");
+    } else {
+        Submit.find({}).sort({date_created: -1}).exec((err, data) => {
+            if (err) {
+                next(err);
+            } else {
+                res.render('admin/submissions/all', {
+                    submits: data
+                });
+            }
+        });
+    }
 });
 
 module.exports = router;

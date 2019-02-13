@@ -21,11 +21,13 @@ block content
                 th Title
                 th Category
                 th Views Count
+                th # of Comments
                 th Date Uploaded
               each video in videos
                 tr
                 td= video.title
                 td= video.category
                 td= video.views
+                td= video.comments.length
                 td= video.date_created
   div(id="marg")

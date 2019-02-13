@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div(id="marg")
+    div(class="row")
+      div(class="col-md-12")
+        h1(class="text-center") Contact us
+        br
+        form(id="contactForm" method="post" action="/contactus")
+          label(for="name") Name
+          input(type="text" name="name" class="form-control" required)
+          br
+          label(for="email") Email
+          input(type="email" name="email" class="form-control" required)
+          br
+          label(for="message") Message
+          textarea(name="message" class="form-control" required)
+          br
+          p By submitting your e-mail, name or any other Personal Information through this form, you are granting consent to Herrahiphop.com to use such Personal Information to respond to your message and for the purposes identified in our Privacy Policy accessible 
+            a(href="/privacy") here.
+          br
+          input(type="submit" value="Submit" class="btn btn-primary")

@@ -19,13 +19,7 @@ $.getJSON("/api/v1/views", (data) => {
 				results.push({data[i].category : 1});
 			}
 		}
-		// for (let a = 0; a < categories.length; a++) {
-
-		// }
-		//categories.push(data[i].category);
 	}
-
-	console.log(categories);
 	
 	var chartData = {
 		labels: categories,

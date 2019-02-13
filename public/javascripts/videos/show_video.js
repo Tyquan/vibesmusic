@@ -1,9 +1,8 @@
-// Getting the Latest Video Should be 3 returned
+// Show the selected video
+
 $.get(`/api/v1/videos${window.location.pathname}`, function(data){
 
-	console.log(data);
-
-	var result = `
+	var resultHtml = `
 		<h3 class="text-center" id="vidTitle">${data.title}</h3>
 		<br>
 		<iframe id="mainVideo" src=${data.link} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -30,6 +29,6 @@ $.get(`/api/v1/videos${window.location.pathname}`, function(data){
 		</div>
 	`;
 	
-	$('#showVideo').append(result);
+	$('#showVideo').append(resultHtml);
 
 });

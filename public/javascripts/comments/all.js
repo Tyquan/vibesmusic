@@ -1,4 +1,5 @@
-// Getting the Latest Video Should be 3 returned
+// All Comments for the video that was selected
+
 $.get(`/api/v1/videos${window.location.pathname}`, function(data){
 	var result = $(`<ul>`);
 	var noCommentsHtml = `<div id="good-hide"><br><h1 class="text-center">No Comments Added Yet</h1></div>`;
@@ -21,7 +22,7 @@ $.get(`/api/v1/videos${window.location.pathname}`, function(data){
 					<li class="list-group-item">
 						<h5>${comment.name}</h5>
 						<pre id="userComments">${comment.body}</pre>
-					</li>`
+					</li>`;
 				result.append(commentsHtml);
 			});
 		}

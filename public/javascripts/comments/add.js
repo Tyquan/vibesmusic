@@ -3,8 +3,7 @@ $( "#target" ).submit(function( event ) {
   //event.preventDefault();
   
   var addCommentUrl = `/api/v1/comments${window.location.pathname}`;
-
-  //console.log(event.target[0].value);
+  
   var name = event.target[0].value;
   var comment = event.target[1].value;
 
