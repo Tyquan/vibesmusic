@@ -6,8 +6,6 @@ $.get('/api/v1/videos/latest_podcasts', function(data){
 
 	data.forEach(function (d) {
 
-		console.log(d);
-
 		let allVideoHtml = `<div class="col-md-12">
 			<a href="/showvideo/${d._id}">
 				<img id="sideImages" src=${d.mainImage} />
