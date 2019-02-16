@@ -21,15 +21,31 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/showvideo/:id', (req, res, next) => {
-	res.render('showvideo');
+	res.render('pages/showvideo');
 });
 
 router.get('/aboutus', (req, res, next) => {
-	res.render('aboutus');
+	res.render('pages/aboutus');
+});
+
+router.get('/music', (req, res, next) => {
+	res.render('pages/music');
+});
+
+router.get('/interviews', (req, res, next) => {
+	res.render('pages/interviews');
+});
+
+router.get('/news', (req, res, next) => {
+	res.render('pages/news');
+});
+
+router.get('/podcasts', (req, res, next) => {
+	res.render('pages/podcasts');
 });
 
 router.get('/contactus', (req, res, next) => {
-	res.render('contactus');
+	res.render('forms/contactus');
 });
 
 router.post('/contactus', (req, res, next) => {
@@ -48,7 +64,7 @@ router.get('/sorrypage', (req, res, next) => {
 });
 
 router.get('/submit', (req, res, next) => {
-	res.render('submit');
+	res.render('forms/submit');
 });
 
 router.post('/submit', (req, res, next) => {
@@ -63,12 +79,12 @@ router.post('/submit', (req, res, next) => {
 });
 
 router.get('/privacy', (req, res, next) => {
-	res.render('privacy');
+	res.render('pages/privacy');
 });
 
 /* GET signup Page. */
 router.get('/signup', (req, res, next)=> {
-    res.render('signup');
+    res.render('forms/signup');
 });
 
 /* GET Logout Page. */

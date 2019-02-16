@@ -7,7 +7,7 @@ var router = express.Router();
 
 /* GET Login Page. */
 router.get('/login', (req, res, next)=> {
-    res.render('login');
+    res.render('forms/login');
 });
 
 router.post('/login', (req, res, next) => {
