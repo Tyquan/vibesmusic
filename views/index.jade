@@ -6,16 +6,26 @@ block content
     if videos < 1
       h1(class="text-center") No Videos Added Yet
     else
+      div(id="topMargin")
       div(class="row")
-        div(class="col-sm-12")
+        div(class="col-md-8")
           div(id="latestVideoContainer")
             center
               div(id="latest")
-      hr
-      div(id="latest_two")
-      div(id="content")
-        h1(class="text-center") New Videos
-        div(id="allVideos")
+            div(id="latest_ten")
+        div(class="col-md-4")
+          div(id="sideBg")
+            br
+            h3(class="text-center" style="color:white") NEWS
+            div(id="latest_news")
+            hr
+            h3(class="text-center" style="color:white") INTERVIEWS
+            div(id="latest_interviews")
+            hr
+            h3(class="text-center" style="color:white") PODCASTS
+            div(id="latest_podcasts")
   script(src="/javascripts/videos/latest.js")
-  script(src="/javascripts/videos/latest_two.js")
-  script(src="/javascripts/videos/all.js")
+  script(src="/javascripts/videos/latest_news.js")
+  script(src="/javascripts/videos/latest_interviews.js")
+  script(src="/javascripts/videos/latest_podcasts.js")
+  script(src="/javascripts/videos/latest_ten.js")

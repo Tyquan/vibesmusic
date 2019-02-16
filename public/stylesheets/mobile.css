@@ -7,6 +7,11 @@
     color: white;
   }
 
+  #sideImages {
+    height: 200px;
+    width: 100%;
+  }
+
   #foots {
     color: white;
   }
@@ -49,7 +54,7 @@
   }
 
   #latestVideoContainer {
-    margin-top: 2%;
+    /*margin-top: 2%;*/
   }
 
   #latestTwoVideos {
@@ -151,5 +156,14 @@
     background-color: #2d3436;
     padding: 1%;
     border-radius: 5px;
+  }
+
+  #sideBg {
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  #topMargin {
+    margin-top: 2%;
   }
 }

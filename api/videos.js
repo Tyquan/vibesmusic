@@ -37,15 +37,57 @@ router.get("/topfive", (req, res, next) => {
 	});
 });
 
-/* GET home page. */
-router.get('/latest_two', function(req, res, next) {
-	Video.find({}).sort({date_created: -1}).exec((err, doc) => {
+
+router.get('/latest_news', (req, res, next) => {
+	Video.find({category: "News"}).sort({date_created: -1}).exec((err, doc) => {
+		if (err) {
+			next(err);
+		} else {
+			res.status(200).json(doc[0]);
+		}
+	});
+});
+
+router.get('/latest_interviews', (req, res, next) => {
+	Video.find({category: "Interview"}).sort({date_created: -1}).exec((err, doc) => {
+		if (err) {
+			next(err);
+		} else {
+			let docs = [];
+			for (let i = 0; i < doc.length; i++) {
+				if (docs.length < 3) {
+					docs.push(doc[i]);
+				}
+			}
+			res.status(200).json(docs);
+		}
+	});
+});
+
+router.get('/latest_podcasts', (req, res, next) => {
+	Video.find({category: "Podcast"}).sort({date_created: -1}).exec((err, doc) => {
+		if (err) {
+			next(err);
+		} else {
+			let docs = [];
+			for (let i = 0; i < doc.length; i++) {
+				if (docs.length < 3) {
+					docs.push(doc[i]);
+				}
+			}
+			res.status(200).json(docs);
+		}
+	});
+});
+
+router.get('/latest_ten', function(req, res, next) {
+	Video.find({category: "HipHop"}).sort({date_created: -1}).exec((err, doc) => {
 		if (err) {
 			throw err;
 		} else {
 			let docs = [];
 			for (let i = 0; i < doc.length; i++) {
-				if (docs.length <= 2) {
+				if (docs.length < 10) {
 					docs.push(doc[i]);
 				}
 			}

@@ -7,7 +7,7 @@
     background-size: contain;
   }
 	#col-sm-6 {
-    width: 25%;
+    width: 50%;
   }
 
   #videoImageTitles {
@@ -19,7 +19,7 @@
   }
 
   #latestVideoContainer {
-  	margin-top: 8%;
+  	/*margin-top: 8%;*/
   }
 
   #vidTitle {
