@@ -7,6 +7,10 @@
     color: white;
   }
 
+  #title {
+    font-size: 1em;
+  }
+
   #sideImages {
     height: 200px;
     width: 100%;
@@ -143,7 +147,6 @@
     color: white;
     font-size: 1.6em;
     background-color: #d63031 !important;
-    font-family: 'Rancho', cursive;
   }
 
   #adminContainer {
@@ -172,9 +175,52 @@
   #sideBg {
     background-color: black;
     border-radius: 5px;
+    padding: 5%;
   }
 
   #topMargin {
     margin-top: 2%;
+  }
+
+  #social-youtube {
+    font-size: 3em;
+    color: red;
+    background-color: white;
+    border-radius: 10px;
+    height: 100%
+  }
+
+  #social-facebook {
+    color: #3b5998;
+    font-size: 3em;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  #social-twitter {
+    color: #38A1F3;
+    font-size: 3em;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  #social-instagram {
+    color: #bc2a8d;
+    font-size: 3em;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  #socialContainer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  #col-sm-3 {
+    width: 25%;
+    float: left;
+    text-align: center;
   }
 }
