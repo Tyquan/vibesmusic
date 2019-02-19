@@ -1,7 +1,7 @@
 /* Mobile View */
 @media screen and (min-width: 320px) {
   body {
-    font-family: 'Philosopher';
+    
   }
   .navbar-light .navbar-nav .nav-link {
     color: white;
@@ -23,13 +23,13 @@
   #col-sm-6 {
     width: 50%;
     float: left;
-    background-color: #2d3436;
+    background-color: white;
   }
 
   #col-md-6 {
     width: 50%;
     float: left;
-    background-color: #2d3436;
+    background-color: white
   }
 
   #content {
@@ -83,7 +83,7 @@
     margin-bottom: 5%;
     margin-right: 5%;
     margin-left: 2%;
-    color: white;
+    color: black;
   }
 
   #employee-link {
@@ -145,7 +145,7 @@
 
   #footer {
     color: white;
-    font-size: 1.6em;
+    font-size: 1.2em;
     background-color: #d63031 !important;
   }
 
@@ -173,7 +173,7 @@
   }
 
   #sideBg {
-    background-color: black;
+    background-color: white;
     border-radius: 5px;
     padding: 5%;
   }
@@ -223,4 +223,22 @@
     float: left;
     text-align: center;
   }
+
+  #sideTitle {
+    color: black;
+    font-family: 'Philosopher';
+  }
+  #logo {
+    color: white;
+    font-family: 'Rancho', cursive;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-align: center
+  }
+
+  #newsletter {
+    font-size: 1em;
+    margin-top: 10%;
+  }
+
 }
