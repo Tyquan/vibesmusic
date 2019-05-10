@@ -22,24 +22,6 @@ $.get('/api/v1/videos/', function(data){
 		div.append(allVideoHtml);
 	}
 
-	//console.log(data);
-	// data.forEach(function (d) {
-	// 	if (d.category == "Podcast" || d.category == "Show" || d.category == "Trailers" || d.category == "Announcements") {
-	// 		if (rows.length <= 3) {
-	// 			let allVideoHtml = `<div class="col-md-12">
-	// 				<a href="/showvideo/${d._id}">
-	// 					<img id="sideImages" src=${d.mainImage} />
-	// 					<h1 id="videoImageTitles">${d.title}</h1>
-	// 				</a>
-	// 			</div>`;
-	// 			rows.push(allVideoHtml);
-
-	// 			//div.append(allVideoHtml);
-	// 			div.append(rows);
-	// 			console.log(div);
-	// 		}
-	// 	}
-
 	$('#latest_podcasts').append(div);
 });
 

@@ -87,7 +87,23 @@ router.get('/latest_ten', function(req, res, next) {
 		} else {
 			let docs = [];
 			for (let i = 0; i < doc.length; i++) {
-				if (docs.length < 10) {
+				if (docs.length < 18) {
+					docs.push(doc[i]);
+				}
+			}
+			res.status(200).json(docs);
+		}
+	});
+});
+
+router.get('/latest_rb', function(req, res, next) {
+	Video.find({category: "RB"}).sort({date_created: -1}).exec((err, doc) => {
+		if (err) {
+			throw err;
+		} else {
+			let docs = [];
+			for (let i = 0; i < doc.length; i++) {
+				if (docs.length < 2) {
 					docs.push(doc[i]);
 				}
 			}
