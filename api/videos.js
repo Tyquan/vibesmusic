@@ -87,7 +87,7 @@ router.get('/latest_ten', function(req, res, next) {
 		} else {
 			let docs = [];
 			for (let i = 0; i < doc.length; i++) {
-				if (docs.length < 18) {
+				if (docs.length < 27) {
 					docs.push(doc[i]);
 				}
 			}

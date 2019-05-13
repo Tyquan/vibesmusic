@@ -48,6 +48,12 @@ router.get('/podcasts', (req, res, next) => {
 	});
 });
 
+router.get('/sports', (req, res, next) => {
+	res.render('pages/sports', { 
+	    title: 'Herra Hip Hop | Sports'
+	});
+});
+
 router.get('/contactus', (req, res, next) => {
 	res.render('forms/contactus', { 
 	    title: 'Herra Hip Hop | Contact Us'

@@ -1,7 +1,6 @@
 // Show the selected video
 
 $.get(`/api/v1/videos${window.location.pathname}`, function(data){
-
 	var resultHtml = `
 		<h3 class="text-center" id="vidTitle">${data.title}</h3>
 		<br>
@@ -9,7 +8,6 @@ $.get(`/api/v1/videos${window.location.pathname}`, function(data){
 		<hr>
 		<div class="row">
 			<div class="col-sm-6">
-				<h6>Posted: ${data.date_created}</h6>
 				<h6>
 					<span id="views">${data.views}</span> Views
 				</h6>
