@@ -1,10 +1,11 @@
 /* Tablet View */
 @media screen and (min-width: 760px) {
 	body {
-    background-image: url("/images/bg.png");
+    /*background-image: url("/images/bg.png");
     background-position: center;
     background-repeat: repeat-y;
-    background-size: contain;
+    background-size: contain;*/
+    background-color: white;
   }
 	#col-sm-6 {
     width: 33%;
