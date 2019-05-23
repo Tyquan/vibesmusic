@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 const moment = require('moment');
 var Video = require('../models/video');
 var Message = require('../models/message');
-const Submit = require('../models/submit');
+//const Submit = require('../models/submit');
 var router = express.Router();
 
 // render Dashboard page
@@ -48,7 +48,16 @@ router.get('/createvideo', (req, res, next) => {
 });
 
 router.post('/createvideo', (req, res, next) => {
+    var start = req.body.link.substring(0, 8);
+    var replaceable = req.body.link.substring(8, 16);
+    var end = req.body.link.substring(16);
+
+    var embed = "www.youtube.com/embed";
+    var final = start + embed + end;
+
     var video = new Video(req.body);
+    video.link = final;
+    
     video.save((err, data) => {
         if (err) {
             throw err;
@@ -89,20 +98,20 @@ router.get('/showmessage/:id', (req, res, next) => {
     });
 });
 
-router.get('/submits', (req, res, next) => {
-    if (!req.session.user) {
-        return res.status(400).send("You have to be logged in to view this section");
-    } else {
-        Submit.find({}).sort({date_created: -1}).exec((err, data) => {
-            if (err) {
-                next(err);
-            } else {
-                res.render('admin/submissions/all', {
-                    submits: data
-                });
-            }
-        });
-    }
-});
+// router.get('/submits', (req, res, next) => {
+//     if (!req.session.user) {
+//         return res.status(400).send("You have to be logged in to view this section");
+//     } else {
+//         Submit.find({}).sort({date_created: -1}).exec((err, data) => {
+//             if (err) {
+//                 next(err);
+//             } else {
+//                 res.render('admin/submissions/all', {
+//                     submits: data
+//                 });
+//             }
+//         });
+//     }
+// });
 
 module.exports = router;

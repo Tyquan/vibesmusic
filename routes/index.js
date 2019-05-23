@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Video = require('../models/video');
 const Message = require('../models/message');
-const Submit = require('../models/submit');
+//const Submit = require('../models/submit');
 const router = express.Router();
 
 /* GET home page. */
@@ -81,16 +81,16 @@ router.get('/submit', (req, res, next) => {
 	});
 });
 
-router.post('/submit', (req, res, next) => {
-	let submit = new Submit(req.body);
-	submit.save()
-		.then((data) => {
-			res.redirect('submit');
-		})
-		.catch((error) => {
-			res.redirect('sorrypage');
-		});
-});
+// router.post('/submit', (req, res, next) => {
+// 	let submit = new Submit(req.body);
+// 	submit.save()
+// 		.then((data) => {
+// 			res.redirect('submit');
+// 		})
+// 		.catch((error) => {
+// 			res.redirect('sorrypage');
+// 		});
+// });
 
 router.get('/privacy', (req, res, next) => {
 	res.render('pages/privacy', { 

@@ -13,7 +13,7 @@ const multer = require('multer');
 const config = require('./config/config'); // get our config file
 
 const index = require('./routes/index');
-const auth = require('./routes/auth');
+//const auth = require('./routes/auth');
 const admin = require('./routes/admin');
 const messages = require('./routes/messages');
 
@@ -39,9 +39,6 @@ const app = express();
 app.use(compression());
 
 app.set('superSecret', config.secret); // secret constiable
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public/images', 'fav.png')));
@@ -56,11 +53,11 @@ app.use(session({
   saveUninitialized: true,
   cookie: {maxAge: 180 * 60 * 1000 }
 }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 // Routes
 app.use('/', index);
-app.use('/auth', auth);
+//app.use('/auth', auth);
 app.use('/admin', admin);
 app.use('/messages', messages);
 
@@ -69,6 +66,10 @@ app.use('/api/v1/videos', videos);
 app.use('/api/v1/comments', comments);
 app.use('/api/v1/views', views);
 app.use('/api/v1/subscribers', subscribers);
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 
 
