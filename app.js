@@ -17,8 +17,8 @@ const index = require('./routes/index');
 const admin = require('./routes/admin');
 const messages = require('./routes/messages');
 
-const videos = require('./api/videos');
-const comments = require('./api/comments');
+//const videos = require('./api/videos');
+//const comments = require('./api/comments');
 const views = require('./api/views');
 const subscribers = require('./api/subscribers');
 
@@ -41,7 +41,7 @@ app.use(compression());
 app.set('superSecret', config.secret); // secret constiable
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public/images', 'fav.png')));
+//app.use(favicon(path.join(__dirname, 'public/images', 'fav.png')));
 app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -62,9 +62,9 @@ app.use('/admin', admin);
 app.use('/messages', messages);
 
 // API
-app.use('/api/v1/videos', videos);
-app.use('/api/v1/comments', comments);
-app.use('/api/v1/views', views);
+//app.use('/api/v1/videos', videos);
+//app.use('/api/v1/comments', comments);
+//app.use('/api/v1/views', views);
 app.use('/api/v1/subscribers', subscribers);
 
 app.get('/', (req, res) => {

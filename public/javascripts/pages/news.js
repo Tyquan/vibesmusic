@@ -1,1 +1,0 @@
-showPage('/api/v1/videos', "News", "#news");
