@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Header from './Header';
-import { startLogin } from '../actions/auth';
+import Header from '../Header';
+import { startLogin } from '../../actions/auth';
 
 export const LoginPage = ({ startLogin }) => (
   <div className="box-layout">

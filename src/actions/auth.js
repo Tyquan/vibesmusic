@@ -5,6 +5,7 @@ export const login = (id) => ({
 
 export const startLogin = () => {
     return () => {
+        localStorage.setItem("herraIsLoggedIn", true);
         alert("User Logged In");
     };
 };
@@ -15,6 +16,7 @@ export const logout = () => ({
 
 export const startLogout = () => {
     return () => {
+        localStorage.removeItem("herraIsLoggedIn");
         alert("User Logged Out");
     };
 };

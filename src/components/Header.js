@@ -1,35 +1,28 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {startLogout} from '../actions/auth';
 
-function ShowAuth(props) {
-    const isLoggedIn = props.isLoggedIn;
+function ShowAuth() {
+    const isLoggedIn = localStorage.getItem("herraIsLoggedIn");
     if (isLoggedIn) {
-        return (<button className="btn btn-primary" onClick={startLogout}>Logout</button>);
+        return (<button className="btn btn-primary"><Link to="/logout" className="loginBtn">Logout</Link></button>);
+    } else {
+        return (<button className="btn btn-primary"><Link to="/login" className="loginBtn">Login</Link></button>);
     }
-    return (<button className="btn btn-primary"><Link to="/LoginPage" className="loginBtn">Login</Link></button>);
 }
 
-export const Header = ({ startLogout }) => (
+export const Header = () => (
     <header className="header">
         <div className="container">
             <div className="row">
                 <div className="col-md-8">
-                    <Link className="header__title" to="/">
-                        <h1>Herra Hiphop</h1>
-                    </Link>
+                    <h4><Link className="header__title" to="/">Herra Hiphop</Link></h4>
                 </div>
                 <div className="col-md-4">
-                    <ShowAuth isLoggedIn={false} />
+                    <ShowAuth />
                 </div>
             </div>
         </div>
     </header>
 );
 
-const mapDispatchToProps = (dispatch) => ({
-    startLogout: () => dispatch(startLogout())
-});
-  
-export default connect(undefined, mapDispatchToProps)(Header);
+export default Header;
