@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
     "start-react": "react-scripts start",
     "build-react": "react-scripts build",
     "test-react": "react-scripts test",
